@@ -1,3 +1,4 @@
+import 'package:first_project/pages/vehicle/vehicle_list.dart';
 import 'package:flutter/material.dart';
 
 import '../../design/colors.dart';
@@ -24,7 +25,7 @@ class VehiclePage extends StatelessWidget {
       ),
       body: Container(
         color: backgroundColor,
-        child: const Text('Body'),
+        child: const VehicleList(),
       ),
     );
   }
