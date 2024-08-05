@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../colors.dart';
 import '../dimensions.dart';
+import '../styles.dart';
 
 class AccentButton extends StatelessWidget {
   final String title;
@@ -25,10 +26,7 @@ class AccentButton extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           title,
-          style: const TextStyle(
-              color: surfaceColor,
-              fontSize: fontSize14,
-              fontWeight: FontWeight.w600),
+          style: accentButtonTextStyle,
         ));
   }
 }

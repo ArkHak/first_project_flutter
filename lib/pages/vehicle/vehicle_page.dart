@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../design/colors.dart';
 import '../../design/dimensions.dart';
+import '../../design/styles.dart';
 
 class VehiclePage extends StatelessWidget {
   const VehiclePage({super.key});
@@ -13,11 +14,7 @@ class VehiclePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'First App by Flutter',
-          style: TextStyle(
-            color: primaryColor,
-            fontSize: fontSize16,
-            fontWeight: FontWeight.w500,
-          ),
+          style: primaryTextStyle,
         ),
         centerTitle: true,
         elevation: elevation0,

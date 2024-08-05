@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import '../../design/colors.dart';
 import '../../design/dimensions.dart';
 import '../../design/images.dart';
+import '../../design/styles.dart';
 
 class VehicleItem extends StatelessWidget {
   const VehicleItem({super.key});
@@ -44,39 +45,23 @@ class VehicleItem extends StatelessWidget {
               "BWM M3 SUPER",
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                  color: secondaryColor,
-                  fontSize: fontSize14,
-                  fontWeight: FontWeight.w600),
+              style: body2TextStyle,
             ),
             if (false)
               Text(
                 "No Driver",
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    color: secondaryVariantColor,
-                    fontSize: fontSize14,
-                    fontWeight: FontWeight.w400),
+                style: hint1TextStyle,
               )
             else
               RichText(
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                text: const TextSpan(
-                    style: TextStyle(fontSize: fontSize14),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: "Driver",
-                          style: TextStyle(
-                              color: secondaryVariantColor,
-                              fontWeight: FontWeight.w400)),
-                      TextSpan(
-                          text: "Maximus",
-                          style: TextStyle(
-                              color: secondaryColor,
-                              fontWeight: FontWeight.w600))
-                    ]),
+                text: const TextSpan(children: <TextSpan>[
+                  TextSpan(text: "Driver", style: hint1TextStyle),
+                  TextSpan(text: "Maximus", style: body2TextStyle)
+                ]),
               )
           ],
         ),
@@ -93,10 +78,7 @@ class VehicleItem extends StatelessWidget {
             statePickupImages,
             const Text(
               "pickup",
-              style: TextStyle(
-                  color: secondaryVariantColor,
-                  fontSize: fontSize12,
-                  fontWeight: FontWeight.w400),
+              style: hint2TextStyle,
             )
           ]),
     );
