@@ -10,6 +10,7 @@ const double fontSize14 = 14;
 const double fontSize16 = 16;
 const double fontSize24 = 24;
 
+const double width16 = 16;
 const double width200 = 200;
 
 const double height8 = 8;

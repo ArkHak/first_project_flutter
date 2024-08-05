@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../styles.dart';
 import '../widgets/accent_button.dart';
 import '../dimensions.dart';
 
@@ -21,14 +22,12 @@ class ErrorDialog extends StatelessWidget {
           children: <Widget>[
             const Text(
               "Oops...",
-              style:
-                  TextStyle(fontSize: fontSize24, fontWeight: FontWeight.w600),
+              style: head1TextStyle,
             ),
             const SizedBox(height: height8),
             Text(
               descriptions,
-              style: const TextStyle(
-                  fontSize: fontSize16, fontWeight: FontWeight.w400),
+              style: body1TextStyle,
             ),
             const SizedBox(height: height20),
             Center(
