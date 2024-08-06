@@ -6,15 +6,15 @@ import '../../design/utils/size_utils.dart';
 import '../../design/widgets/accent_button.dart';
 import '../../design/dimensions.dart';
 
-class DriverList extends StatefulWidget {
-  const DriverList({super.key});
+class VehicleStateList extends StatefulWidget {
+  const VehicleStateList({super.key});
 
   @override
-  State<DriverList> createState() => _DriverListState();
+  State<VehicleStateList> createState() => _DriverListState();
 }
 
-class _DriverListState extends State<DriverList> {
-  int? _selectedDriverIndex;
+class _DriverListState extends State<VehicleStateList> {
+  int? _selectedStateIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +36,15 @@ class _DriverListState extends State<DriverList> {
           return const SizedBox(height: height8);
         },
         itemBuilder: (BuildContext context, int index) {
-          final bool isSelected = _selectedDriverIndex == index;
+          final bool isSelected = _selectedStateIndex == index;
           return SelectableItem(
-            image: accountCircleImages,
-            leftPadding: padding8,
-            title: "Paul",
+            image: statePickupImages,
+            leftPadding: padding16,
+            title: "Pickup",
             isSelected: isSelected,
             onTap: () {
               setState(() {
-                _selectedDriverIndex = index;
+                _selectedStateIndex = index;
               });
             },
           );
