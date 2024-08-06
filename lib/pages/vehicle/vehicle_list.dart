@@ -1,4 +1,5 @@
 import 'package:first_project/pages/driver/driver_page.dart';
+import 'package:first_project/pages/vehicle_state/vehicle_state_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../design/dialog/error_dialog.dart';
@@ -34,6 +35,9 @@ class VehicleList extends StatelessWidget {
             onTap: () async {
               await _showDriverPage(context);
             },
+            onStateTap: () async {
+              await _showVehicleStatePage(context);
+            },
           );
         });
   }
@@ -63,6 +67,12 @@ class VehicleList extends StatelessWidget {
   Future<void> _showDriverPage(BuildContext context) async {
     await Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const DriverPage();
+    }));
+  }
+
+  Future<void> _showVehicleStatePage(BuildContext context) async {
+    await Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const VehicleStatePage();
     }));
   }
 }
